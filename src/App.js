@@ -1,25 +1,14 @@
-import PaginationSearch from 'react-pagination-search';
-import data from './data.json';
+import CustomExample from './components/CustomExample';
+import DefaultExample from './components/DefaultExample';
+import './index.css';
 
 function App() {
 
   return (
-    <PaginationSearch
-        data={data}
-        itemsPerPage={20}
-    >
-        <PaginationSearch.Searchbox />
-        <PaginationSearch.Data
-            render={(item) => {
-                return (
-                    <div>
-                        {item.name.official}
-                    </div>
-                )
-            }}
-        />
-        <PaginationSearch.Buttons />
-    </PaginationSearch>
+    <div className='container'>
+        <DefaultExample />
+        <CustomExample />
+    </div>
   );
 }
 
